@@ -1,8 +1,8 @@
 class GtsBio < Formula
   desc "GTS: The Genomics Tool suite"
   homepage "https://github.com/go-gts/gts"
-  url "https://github.com/go-gts/gts/archive/v0.9.2.tar.gz"
-  sha256 "47c6236087357465ebd34d732dee543586cc52708baea84585f1a1739c0ba846"
+  url "https://github.com/go-gts/gts/archive/v0.9.3.tar.gz"
+  sha256 "718f45b520f0fadc39fc43d88ba183bbe50cf77f7f44852aba6147005c48a4a4"
 
   bottle do
     root_url "https://dl.bintray.com/go-gts/bottles-gts"
