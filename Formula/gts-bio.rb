@@ -7,7 +7,15 @@ class GtsBio < Formula
   bottle do
     root_url "https://dl.bintray.com/go-gts/bottles-gts"
     cellar :any_skip_relocation
-    sha256 "2f841ce4add6c057b8827a38244c5b7faec418e2690f6cbac187f2d105fa0299" => :catalina
+    rebuild 1
+    sha256 "82517a8144c0aa8dc99288aea6e0f3806938a6f547af0fcaead0451cfb348922" => :catalina
+    sha256 "c995352069eef9a5119fa59449b8712d54c6570ff9a59c84b59a57c2f87b34fa" => :x86_64_linux
+  end
+
+  bottle do
+    root_url "https://dl.bintray.com/go-gts/bottles-gts"
+    cellar :any_skip_relocation
+    sha256 "0b68c945c30452387d3158ce84ef5e96a1f160b697aae753091fc757a9c479c5" => :catalina
   end
 
   depends_on "go" => :build
