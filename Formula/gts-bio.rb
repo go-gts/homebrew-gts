@@ -2,16 +2,16 @@
 class GtsBio < Formula
   desc "GTS: the Genomics Tools Suite"
   homepage "https://github.com/go-gts/gts"
-  version "0.19.1"
+  version "0.20.0"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/go-gts/gts/releases/download/v0.19.1/gts_0.19.1_Darwin_x86_64.tar.gz"
-    sha256 "3e3aaab05caec6617b77911c0ac92fd6a26423c542adc70152cb2b2cda2315e3"
+    url "https://github.com/go-gts/gts/releases/download/v0.20.0/gts_0.20.0_Darwin_x86_64.tar.gz"
+    sha256 "83b9017b69a2d2dce178adeec2268cac36d0350283aef044c160f0a09130e69f"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/go-gts/gts/releases/download/v0.19.1/gts_0.19.1_Linux_x86_64.tar.gz"
-      sha256 "3cd6808f6f6b0862809e7015cc3ae7c027ee1d7936bcd8540aa2b45330d9bcec"
+      url "https://github.com/go-gts/gts/releases/download/v0.20.0/gts_0.20.0_Linux_x86_64.tar.gz"
+      sha256 "59ed884648b2a04cec4b7a79f01a26b73d8fee7456c3f057acd91e0a71a06718"
     end
   end
   
