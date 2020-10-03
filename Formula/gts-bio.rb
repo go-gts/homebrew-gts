@@ -2,24 +2,26 @@
 class GtsBio < Formula
   desc "GTS: Genome Transformation Subprograms"
   homepage "https://github.com/go-gts/gts"
-  version "0.22.1"
+  version "0.22.2"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/go-gts/gts/releases/download/v0.22.1/gts_0.22.1_Darwin_x86_64.tar.gz"
-    sha256 "0d2940000d12961ef48f4bfa78069bc9d26614af888861a131989f02fbd2146f"
+    url "https://github.com/go-gts/gts/releases/download/v0.22.2/gts_0.22.2_Darwin_x86_64.tar.gz"
+    sha256 "ffdb19f6f40d520175ae3ee27e04ab5583e616602d865f5fde81d32b67d5c99a"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/go-gts/gts/releases/download/v0.22.1/gts_0.22.1_Linux_x86_64.tar.gz"
-      sha256 "331f01bb37094f08f7456713c264c0b77c37bdf559c2051c02483df8d9782879"
+      url "https://github.com/go-gts/gts/releases/download/v0.22.2/gts_0.22.2_Linux_x86_64.tar.gz"
+      sha256 "523b65500e02cb71bf5e0850eabf87687462cb1128e2b02a8db407943b446ede"
     end
   end
 
   def install
     bin.install "gts"
     bin.install "togo"
-    man1.install Dir["manpage/gts*.1"]
-    man7.install Dir["manpage/gts*.7"]
+    man1.install Dir["man/gts*.1"]
+    man7.install Dir["man/gts*.7"]
+    bash_completion.install "completion/gts-completion.bash"
+    zsh_completion.install "completion/gts-completion.zsh" => "_gts"
   end
 
   test do
