@@ -5,24 +5,24 @@
 class GtsBio < Formula
   desc "GTS: Genome Transformation Subprograms"
   homepage "https://github.com/go-gts/gts"
-  version "0.26.15"
+  version "0.27.1"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/go-gts/gts/releases/download/v0.26.15/gts_0.26.15_Darwin_x86_64.tar.gz"
-    sha256 "eca052e9469cb985972dd5b562d5a4db975815a610fe10a0c6167d1308b25238"
+    url "https://github.com/go-gts/gts/releases/download/v0.27.1/gts_0.27.1_Darwin_x86_64.tar.gz"
+    sha256 "66191efbfee6b74babbd58029630d2b7d02732f2f191d83156e209d41a359b36"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/go-gts/gts/releases/download/v0.26.15/gts_0.26.15_Darwin_arm64.tar.gz"
-    sha256 "c03571282428793830a5b7a4039c3d367480cda3270e7fe4d2e6950bbbfaf5d6"
+    url "https://github.com/go-gts/gts/releases/download/v0.27.1/gts_0.27.1_Darwin_arm64.tar.gz"
+    sha256 "a4efe031058c3d6ea8217e57a64c0c20fe5571e6726be352041181a42544823b"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/go-gts/gts/releases/download/v0.26.15/gts_0.26.15_Linux_x86_64.tar.gz"
-    sha256 "5676b7b61487cb49e020a56209eb2243c6852355f3625dd54395f58ab1a435fb"
+    url "https://github.com/go-gts/gts/releases/download/v0.27.1/gts_0.27.1_Linux_x86_64.tar.gz"
+    sha256 "3446919d57dda07cabccb43e3e0bf543d8d18d4af7c82f107ce24cb3a664a14d"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/go-gts/gts/releases/download/v0.26.15/gts_0.26.15_Linux_arm64.tar.gz"
-    sha256 "1df2d15dbc1436c9459b0814078a18da19f46255d440b76ca3849f956c89d50e"
+    url "https://github.com/go-gts/gts/releases/download/v0.27.1/gts_0.27.1_Linux_arm64.tar.gz"
+    sha256 "b045989b40580da53a5c1355f3bedd3cf2168497ba3ec5673b26535dbaa32b66"
   end
 
   def install
