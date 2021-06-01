@@ -5,24 +5,29 @@
 class GtsBio < Formula
   desc "GTS: Genome Transformation Subprograms"
   homepage "https://github.com/go-gts/gts"
-  version "0.27.1"
+  version "0.28.0"
   bottle :unneeded
 
-  if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/go-gts/gts/releases/download/v0.27.1/gts_0.27.1_Darwin_x86_64.tar.gz"
-    sha256 "66191efbfee6b74babbd58029630d2b7d02732f2f191d83156e209d41a359b36"
+  on_macos do
+    if Hardware::CPU.intel?
+      url "https://github.com/go-gts/gts/releases/download/v0.28.0/gts_0.28.0_Darwin_x86_64.tar.gz"
+      sha256 "af0cbee6bef29d2f4969435505b37497b2804365e38109a3020e2655ca03ed75"
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/go-gts/gts/releases/download/v0.28.0/gts_0.28.0_Darwin_arm64.tar.gz"
+      sha256 "2e8f1ce1cb72e87570d4bcf00541cd0756362c67ee7a36834c49d2837ab68108"
+    end
   end
-  if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/go-gts/gts/releases/download/v0.27.1/gts_0.27.1_Darwin_arm64.tar.gz"
-    sha256 "a4efe031058c3d6ea8217e57a64c0c20fe5571e6726be352041181a42544823b"
-  end
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/go-gts/gts/releases/download/v0.27.1/gts_0.27.1_Linux_x86_64.tar.gz"
-    sha256 "3446919d57dda07cabccb43e3e0bf543d8d18d4af7c82f107ce24cb3a664a14d"
-  end
-  if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/go-gts/gts/releases/download/v0.27.1/gts_0.27.1_Linux_arm64.tar.gz"
-    sha256 "b045989b40580da53a5c1355f3bedd3cf2168497ba3ec5673b26535dbaa32b66"
+
+  on_linux do
+    if Hardware::CPU.intel?
+      url "https://github.com/go-gts/gts/releases/download/v0.28.0/gts_0.28.0_Linux_x86_64.tar.gz"
+      sha256 "ccccc1e14ad80d46698cb82e4c4db42e0bfd3781c84f0b90ad55a21265224cb1"
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/go-gts/gts/releases/download/v0.28.0/gts_0.28.0_Linux_arm64.tar.gz"
+      sha256 "9faffcbe05cfbd19bd7f1db215566aa15f6b3fcb0f8d283455782d9b5abef908"
+    end
   end
 
   def install
